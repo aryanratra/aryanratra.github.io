@@ -3,8 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins','Alata', sans-serif;
     scroll-behavior: smooth;
+    outline: none;
 }
 body{
     min-height: 100vh;
@@ -24,11 +25,11 @@ header{
 }
 header .logo{
     color: #fff;
-    font-weight: 700;
+    font-family: 'Alata',sans-serif;
     text-decoration: none;
     font-size: 2em;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
 }
 header ul{
     display: flex;
@@ -40,8 +41,12 @@ header ul li{
     margin-left: 20px;
 }
 header ul li a{
+    font-family: 'Alata','Poppins',sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
     text-decoration: none;
-    padding: 6px 15px;
+    letter-spacing: 2px;
+    padding: 6px 10px;
     color: #fff;
     border-radius: 20px;
 }
@@ -108,9 +113,10 @@ section img#buzz{
 #text{
     position:absolute;
     color: rgb(194, 210, 255);
+    font-family: 'Alata', 'Poppins', sans-serif;
     text-transform: uppercase;
     font-style: italic;
-    letter-spacing: 5px;
+    letter-spacing: 8px;
     white-space: nowrap;
     font-size: 5.5vw;
     z-index: 6;
@@ -133,12 +139,58 @@ section img#buzz{
 }
 
 .sec h2{
+    font-family: 'Alata','Poppins',sans-serif;
+    letter-spacing: 3px;
     font-size: 3.5em;
     margin-bottom: 10px;
     color: #fff;
 }
 
+.sec h3{
+    font-family: 'Alata','Poppins',sans-serif;
+    font-size: 32px;
+    letter-spacing: 4px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #5fb7ff;
+}
+
 .sec p{
+    font-family: 'Poppins','Alata', sans-serif;
     font-size: 1.2em;
+    font-weight: 200;
+    letter-spacing: 1px;
     color: #fff;
+}
+
+footer{
+    background-color: #1c0522;
+    padding-top: 1px;
+}
+
+
+footer .footer-items{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-items i{
+    font-size: 27px;
+    margin: 0 5px;
+    color: rgb(194, 210, 255);
+}
+
+.footer-items a{
+    font-size: 14px;
+    color: rgb(194, 210, 255);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer-items p{
+    font-size: 14px;
+    color: rgb(194, 210, 255);
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
