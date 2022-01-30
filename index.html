@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Aryan Ratra</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="/lightyear_imgs/Stars.png" id="stars">
+        <img src="/lightyear_imgs/Fog.png" id="fog">
+        <img src="/lightyear_imgs/Buzz.png" id="buzz">
+        <h2 id="text">To Infinity and Beyond</h2>
+        <a href='#sec' id="btn">Explore</a>
+        <img src="/lightyear_imgs/Haze.jpg" id="haze">
+        <img src="/lightyear_imgs/disney_pixar_s_lightyear_logo_png__by_mintmovi3_deampwf-fullview.png" id="logo">
+    </section>
+    <div class="sec" id='sec'>
+        <h2>Buzz Lightyear</h2>
+        <p>Buzz is a toy from a science fiction franchise of the same name. In his fictional backstory, Buzz is a
+            universal space ranger from the Intergalactic Alliance and the captain of the Alliance's team. Buzz is
+            trained in several forms of martial arts and is a highly skilled warrior in hand to hand combat. Being in
+            peak physical condition, Buzz makes a perfect space ranger and is an example to many.
+            <br>
+            <br>
+            <br>
+            <b>Personality</b>
+            <br>
+            <br>
+            <em>“Woody, we need to figure out what's best for everyone!”</em>
+            <br>
+            ―Buzz[src]
+            <br>
+            <br>
+            Buzz, like many characters in Toy Story, is a complicated one, who feels genuine emotions such as pride,
+            anger, depression, and sadness, much like a regular human. These are traits that he shares with his best
+            friend, Woody, however, one could say that Buzz is better at keeping his emotions in check than the cowboy.
+            Buzz is known for his bravery and courage with a by the book mindset, believing the way people should live
+            their life by following the rules. Though there are rare moments when he will bend the rules or tell a cover
+            story if needed to when he knows it is the right thing to do. Though possessing great leadership qualities,
+            one of Buzz's biggest character flaws at times is that he can be rather unemotional.
+            <br>
+            Like Woody, Buzz also goes through an evolution throughout the series. In Toy Story, he was incredibly
+            deluded and actually believed that he himself was the real Buzz Lightyear and would not listen when told
+            that he's really a toy modeled off of the character. Because of this, Buzz believed he could do everything
+            that a real space ranger was able to do such as fly and that his "laser" was a deadly weapon when it was
+            actually just a light bulb. Since seeing the truth of his delusion, Buzz has shown a degree of embarrassment
+            of it. In Toy Story 2, while being attacked by another Buzz Lightyear action figure who also thought he was
+            the real Buzz Lightyear, Buzz remarked in a self-conscious and annoyed tone: "tell me I wasn't this
+            deluded."
+            <br>
+            <br>
+            <br>
+            <b>Physical appearance</b>
+            <br>
+            <br>
+            Buzz Lightyear is a brawny electronic spaceman action figure. He has fair skin, blue eyes, an outline of a
+            swirl on his chin (which gives Buzz a cleft chin), a purple head cap and collar, a clear plastic space
+            helmet with purple buttons on both sides that open or close it. His green torso consists of a light blue
+            sticker that has the words "SPACE RANGER" and the Star Command symbol, purple straps connected to it, three
+            oval talk buttons - one blue, one green, and one red, a yellow nametag that says "LIGHTYEAR" above a red
+            button that pops out purple plastic glider wings with red and white candy cane lining on the top of each,
+            and green ends with red and green flashing lights. On his back, he has a white jetpack with a purple valve
+            and green triangular accents and two black and yellow stickers - one says, "DANGER", and the other says "JET
+            EXHAUST". His white arms have gray circular elbows and matching spheres on the end of his upper arms with
+            black rings on it. His gloves have purple lines on his knuckles and fingertips and green squares on the back
+            of each. His right arm has a red button on his upper arm with a yellow and black striped sticker that reads
+            "LASER" and a red light on his right wrist. His left arm has a Space Ranger symbol sticker on his upper arm
+            and a communicator sticker in his wrist communicator (the latter of which is later peeled off) and "MADE IN
+            TAIWAN" engraved inside on his lid of the wrist communicator. A black bending with a thin green waist. His
+            white spaceman pants have matching collars at the bottom and gray spheres behind his knees and hold his
+            white shoes with green toe accents, purple soles, and black handwriting reading "ANDY" on his right shoe
+            sole.
+            <br>
+            <br>
+
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let fog = document.getElementById('fog');
+        let buzz = document.getElementById('buzz');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let haze = document.getElementById('haze');
+        let logo = document.getElementById('logo');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            fog.style.bottom = value * 1.5 + 'px';
+            buzz.style.top = value * 0.5 + 'px';
+            haze.style.top = value * 0 + 'px';
+            logo.style.top = value * 0 + 'px';
+            text.style.marginBottom = value * 4 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0 + 'px';
+        })
+    </script>
+</body>
+
+</html>
