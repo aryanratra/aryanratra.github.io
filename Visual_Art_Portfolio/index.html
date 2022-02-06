@@ -572,116 +572,73 @@
                 </div>
             </div>
         </section>
-        <!-- Portfolio -->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section__title">Portfolio</h2>
+        <!-- Work -->
+        <section class="work section" id="portfolio">
+            <h2 class="section__title">My Portfolio</h2>
             <span class="section__subtitle">Coolest and Most Recent Work</span>
 
-            <div class="portfolio__container container swiper">
-                <div class="swiper-wrapper">
-                    <!-- ====Portfolio - Booknerds==== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="img\Portfolio_Booknerds.png" alt="" class="portfolio__img">
+            <div class="work__filters">
+                <span class="work__item" data-filter='all'>All</span>
+                <span class="work__item active-work" data-filter='.threed'>3D Work</span>
+                <span class="work__item" data-filter='.film'>Filmmaking</span>
+                <span class="work__item" data-filter='.photo'>Photography</span>
+            </div>
 
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">The Booknerds | Company Intro</h3>
-                            <p class="portfolio__description">I joined the Editorial Internship Program at Booknerds in
-                                the 3rd week of July 2021 and created a brand new 3D Intro for them which better defined
-                                the purpose and goal of the company.</p>
-                            <a href="https://youtu.be/QJc_EosIlIk" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
+            <div class="work__container container grid">
 
-                    <!-- ====Portfolio - ERATR==== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="img\Portfolio_ERATR.png" alt="" class="portfolio__img">
+                <div class="work__card mix threed photo">
+                    <img src="img\Portfolio_Booknerds.png" alt="Portfolio image Booknerds" class="work__img">
 
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">El Río And The Rider | Title Sequence</h3>
-                            <p class="portfolio__description">I was contacted by the ERATR team to make the title
-                                sequence for their movie. The film is a neo-western action thriller and the title
-                                sequence needed to reflect the tone of the film. I came up with
-                                the idea of having metal wings being forged along with the titles in a western font.</p>
-                            <a href="https://youtu.be/zCHQBBYZ5GY" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
+                    <h3 class="work__title">The Booknerds | Company Intro</h3>
 
-                    <!-- ====Portfolio - Shang-Chi==== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="img\Portfolio_Shang-Chi.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Shang-Chi | Credit Sequence (Personal Project)</h3>
-                            <p class="portfolio__description">I was obsessed with the credit sequence of Shang-Chi and
-                                decided to recreate the entire sequence in 7 days, as a tribute to the original version
-                                and to test
-                                my own limits. The original title sequence was made by New York based Perception
-                                Studios.
-                            </p>
-                            <a href="https://youtu.be/7yYNw4Ugrg8" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- ====Portfolio - Underrated==== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="img\Portfolio_Underrated.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Underrated | Lyric Video</h3>
-                            <p class="portfolio__description">I designed and created the lyric video for Etchque The
-                                Bard's Underrated. The video involves a man in an apartment, surrounded by the mess he
-                                has created. He is oblivious to the mess and floats in a pool of chaos.</p>
-                            <a href="https://youtu.be/GbRvIwCyqKY" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- ====Portfolio - Tratak==== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="img\Portfolio_Tratak.png" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Drill Doon | Intro</h3>
-                            <p class="portfolio__description">I made the intro for Drill Doon's Music Video. For the
-                                project I had to create a virtual city environment and composite Suraj Tratak on a
-                                rooftop.</p>
-                            <a href="https://youtu.be/LeusRfPIpFY" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
+                    <a href="https://youtu.be/QJc_EosIlIk" target="_blank" class="work__button">
+                        Demo <i class="uil uil-arrow-right work__icon"></i>
+                    </a>
                 </div>
 
-                <!-- Arrows -->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                <div class="work__card mix threed film">
+                    <img src="img\Portfolio_ERATR.png" alt="Portfolio image El Rio And The Rider" class="work__img">
+
+                    <h3 class="work__title">El Río And The Rider | Title Sequence</h3>
+
+                    <a href="https://youtu.be/zCHQBBYZ5GY" target="_blank" class="work__button">
+                        Demo <i class="uil uil-arrow-right work__icon"></i>
+                    </a>
                 </div>
 
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
+                <div class="work__card mix threed film">
+                    <img src="img\Portfolio_Shang-Chi.jpg" alt="Portfolio image Shang-Chi" class="work__img">
+
+                    <h3 class="work__title">Shang-Chi | Credit Sequence<br>(Personal Project)</h3>
+
+                    <a href="https://youtu.be/7yYNw4Ugrg8" target="_blank" class="work__button">
+                        Demo <i class="uil uil-arrow-right work__icon"></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix threed">
+                    <img src="img\Portfolio_Underrated.jpg" alt="Portfolio image Underrated" class="work__img">
+
+                    <h3 class="work__title">Underrated | Lyric Video</h3>
+
+                    <a href="https://youtu.be/GbRvIwCyqKY" target="_blank" class="work__button">
+                        Demo <i class="uil uil-arrow-right work__icon"></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix threed photo">
+                    <img src="img\Portfolio_Tratak.png" alt="Portfolio image Tratak" class="work__img">
+
+                    <h3 class="work__title">Drill Doon | Intro</h3>
+
+                    <a href="https://youtu.be/LeusRfPIpFY" target="_blank" class="work__button">
+                        Demo <i class="uil uil-arrow-right work__icon"></i>
+                    </a>
+                </div>
+
             </div>
         </section>
+        
         <!-- Contact Me -->
         <section class="contact section" id="contact">
             <h2 class="section__title">Contact Me</h2>
@@ -800,10 +757,10 @@
 
 
 
+    <!-- Main JS -->
+    <script src="js\mixitup.min.js"></script>
 
 
-    <!-- Swiper JS -->
-    <script src="js\swiper-bundle.min.js"></script>
 
     <!-- Main JS -->
     <script src="js\main.js"></script>

@@ -94,20 +94,25 @@ modalCloses.forEach((modalClose) => {
     })
 })
 
-/* =====Portfolio Swiper===== */
-let swiper = new Swiper(".portfolio__container", {
-    cssMode: true,
-    loop: true,
+/* =====Mixitup Filter Portfolio===== */
+let mixer = mixitup('.work__container', {
+    selectors: {
+        target: '.work__card'
+    },
+    animation: {
+        duration: 300
+    }
+});
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+/* =====Link Active Work===== */
+const linkWork = document.querySelectorAll('.work__item')
+
+function activeWork(){
+    linkWork.forEach(l=>l.classList.remove('active-work'))
+    this.classList.add('active-work')
+}
+
+linkWork.forEach(l=> l.addEventListener('click', activeWork))
 
 /* =====Scroll Sections Active Link===== */
 const sections = document.querySelectorAll('section[id]')
