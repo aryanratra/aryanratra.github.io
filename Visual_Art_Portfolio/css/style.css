@@ -562,6 +562,22 @@ img{
     width: 80%;
 }
 
+.skills__html{
+    width: 65%;
+}
+
+.skills__oop{
+    width: 85%;
+}
+
+.skills__java{
+    width: 70%;
+}
+
+.skills__cpp{
+    width: 60%;
+}
+
 
 
 .skills__close .skills__list{
@@ -1253,7 +1269,7 @@ img{
     }
 
     .services__container{
-        grid-template-columns: repeat(3, 238px);
+        grid-template-columns: repeat(4, 238px);
     }
 
     .work__container{
