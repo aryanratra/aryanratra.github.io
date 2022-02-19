@@ -203,8 +203,8 @@ button{
   .nav__menu{
     position: fixed;
     width: 100%;
-    background-color: hsla(180, 28%, 95%, 0.3);
-    backdrop-filter: blur(14px);
+    background-color: hsla(180, 28%, 95%, 0.4);
+    backdrop-filter: blur(12px);
     box-shadow: 0 2px 8px rgba(0,0,0,.1);
     top: -150%;
     left: 0;
@@ -341,7 +341,12 @@ button{
 
 .home__subtitle{
   font-size: var(--h3-font-size);
-  /* text-transform: uppercase; */
+  letter-spacing: .1rem;
+  margin-bottom: var(--mb-1-5);
+}
+
+.subpage__subtitle{
+  font-size: var(--h3-font-size);
   letter-spacing: .1rem;
   margin-bottom: var(--mb-1-5);
 }
@@ -353,6 +358,14 @@ button{
   line-height: 109%;
   margin-bottom: 0;
   text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+
+.subpage__title{
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-semi-bold);
+  line-height: 109%;
+  margin-bottom: 0;
   letter-spacing: .3rem;
 }
 
@@ -429,8 +442,19 @@ button{
   justify-self: center;
 }
 
-/*=============== TRICK OR TREAT ===============*/
+/*=============== PAPER CALL ===============*/
+.papercall__data{
+  padding: 1rem 0;
+  display: block;
+  margin-bottom: 1rem;
+}
 
+.papercall__list{
+  margin-top: 1rem;
+  display: flex;
+  column-gap: .2rem;
+  align-items: baseline;
+}
 
 /*=============== DISCOUNT ===============*/
 
@@ -472,7 +496,7 @@ button{
 }
 
 .footer__container{
-  row-gap: 2rem;
+  row-gap: 2rem;  
 }
 
 .footer__logo{
@@ -584,10 +608,12 @@ button{
   .header{
     padding-top: 1.25rem;
     height: 5.5rem;
+    transition: .3s;
+    transition-timing-function: ease-in-out;
   }
 
   .scroll-header{
-    background: hsla(180, 28%, 95%, 0.1);
+    background: hsla(180, 28%, 95%, 0.5);
     backdrop-filter: blur(14px);
     box-shadow: 0 2px 8px rgba(0,0,0,.1);
   }
@@ -741,6 +767,11 @@ button{
   }
 
   .home__title{
+    margin-bottom: var(--mb-0-5);
+  }
+
+  .subpage__title{
+    font-size: var(--biggest-font-size);
     margin-bottom: var(--mb-0-5);
   }
 

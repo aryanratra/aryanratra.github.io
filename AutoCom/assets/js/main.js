@@ -81,5 +81,5 @@ const sr = ScrollReveal({
 
 sr.reveal(`.home-swiper`)
 sr.reveal('.about__content')
-sr.reveal('.about__title',{origin: 'left'})
+sr.reveal('.subpage__title,.subpage__subtitle',{origin: 'left'})
 sr.reveal('.about__img',{origin: 'right'})
