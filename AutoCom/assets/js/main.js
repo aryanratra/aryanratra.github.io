@@ -79,8 +79,7 @@ const sr = ScrollReveal({
     // reset: true
 })
 
-sr.reveal(`.home-swiper, .new-swiper, .newsletter__container`)
-sr.reveal(`.category__data, .trick__content, .footer__content`,{interval: 100})
-sr.reveal(`.about__data, .discount__img`,{origin: 'left'})
-sr.reveal(`.about__img, .discount__data`,{origin: 'right'})
+sr.reveal(`.home-swiper`)
 sr.reveal('.about__content')
+sr.reveal('.about__title',{origin: 'left'})
+sr.reveal('.about__img',{origin: 'right'})

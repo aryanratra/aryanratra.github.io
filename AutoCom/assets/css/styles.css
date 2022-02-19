@@ -203,7 +203,9 @@ button{
   .nav__menu{
     position: fixed;
     width: 100%;
-    background: var(--container-color);
+    background-color: hsla(180, 28%, 95%, 0.3);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
     top: -150%;
     left: 0;
     padding: 3.5rem 0;
@@ -275,7 +277,6 @@ button{
 .scroll-header{
   background: var(--container-color);
   box-shadow: 0 2px 8px rgba(0,0,0,.1);
-  
 }
 
 /*=============== HOME ===============*/
@@ -294,8 +295,14 @@ button{
 }
 
 .home__img{
-  height: 300px;
+  height: 220px;
   justify-self: center;
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.home__img:hover{
+  transform: scale(110%);
 }
 
 .home__indicator{
@@ -364,7 +371,7 @@ button{
   background-color: var(--first-color);
   color: var(--title-color);
   padding: 1rem 1.75rem;
-  border-radius: .5rem;
+  border-radius: 2rem;
   font-weight: var(--font-medium);
   transition: .3s;
 }
@@ -405,11 +412,22 @@ button{
   transform: translateX(1rem);
 }
 
-/*=============== CATEGORY ===============*/
 
 
 /*=============== ABOUT ===============*/
+.about__data{
+  padding: 1rem 0;
+  align-content: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+.about__img{
+  height: 300px;
+  aspect-ratio: 100%;
+  justify-self: center;
+}
 
 /*=============== TRICK OR TREAT ===============*/
 
@@ -545,6 +563,10 @@ button{
     height: 200px;
   }
 
+  .about__img{
+    height: 200px;
+  }
+
   .home__buttons{
     flex-direction: column;
     width: max-content;
@@ -554,7 +576,7 @@ button{
 }
 
 /* For Medium Devices */
-@media screen and (min-width: 767px){
+@media screen and (min-width: 768px){
   body{
     margin: 0;
   }
@@ -562,6 +584,12 @@ button{
   .header{
     padding-top: 1.25rem;
     height: 5.5rem;
+  }
+
+  .scroll-header{
+    background: hsla(180, 28%, 95%, 0.1);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
   }
 
   .section{
@@ -612,6 +640,11 @@ button{
     gap: 4rem;
   }
 
+  .about__data{
+    padding: 1rem 0;
+  column-gap: 8rem;
+  }
+
 
   .nav__logo-img{
     width: 4rem;
@@ -619,6 +652,16 @@ button{
   }
 
   .home__img{
+    height: 250px;
+    transform: translateY(5rem);
+    width: auto;
+  }
+
+  .home__img:hover{
+    transform: scale(110%) translateY(5rem);
+  }
+
+  .about__img{
     height: 300px;
   }
 
@@ -667,6 +710,16 @@ button{
   }
 
   .home__img{
+    height: 280px;
+    width: auto;
+    transform: translateY(6rem);
+  }
+
+  .home__img:hover{
+    transform: scale(110%) translateY(6rem);
+  }
+
+  .about__img{
     height: 500px;
     transform: translateY(-3rem);
   }
@@ -674,7 +727,7 @@ button{
   .home__indicator{
     top: initial;
     right: initial;
-    bottom: 15%;
+    bottom: 25%;
     left: 45%;
   }
   .home__indicator::after{
@@ -683,8 +736,8 @@ button{
   }
 
   .home__details-img{
-    top: 28.4rem;
-    right: 58%;
+    top: 26rem;
+    right: 30%;
   }
 
   .home__title{
@@ -704,6 +757,19 @@ button{
 /* For Extra Large Devices */
 @media screen and (min-width: 1200px) {
   .home__img{
+    height: 410px;
+    transform: translateY(2rem);
+  }
+
+  .home__img:hover{
+    transform: scale(110%) translateY(2rem);
+  }
+
+  .about__data{
+    padding: 1rem 3rem;
+  }
+
+  .about__img{
     height: 500px;
   }
 
@@ -747,13 +813,13 @@ button{
     display:unset;
     width: 5%;
     transform: translateX(80px);
-    filter: blur(18px) opacity(15%);
+    filter: brightness(1.6) contrast(0.75) blur(18px) opacity(15%);
     transition: .4s;
     transition-timing-function: ease-in-out;
   }
 
   .nav__img:hover{
     transform: translateX(80px) translateY(-2rem);
-    filter: blur(0px) opacity(100%);
+    filter: brightness(1.6) contrast(0.75)  blur(0px) opacity(100%);
   }
 }
