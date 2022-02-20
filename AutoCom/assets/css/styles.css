@@ -12,6 +12,9 @@
   --title-color: hsl(var(--hue), 4%, 10%);
   --text-color: hsl(var(--hue), 4%, 10%);
   --text-color-light: hsl(var(--hue), 91%, 64%);
+  --table-text-color: hsl(210, 50%, 15%);
+  --table-color: hsl(180, 40%, 80%);
+  --table-color-alt: hsl(200, 45%, 70%);
 
   /*Green gradient*/
   /* --body-color: linear-gradient(90deg, hsl(104, 28%, 40%) 0%, hsl(58, 28%, 40%) 100%);
@@ -450,16 +453,84 @@ button{
 }
 
 .papercall__list{
+  font-size: var(--h3-font-size);
   margin-top: 1rem;
   display: flex;
   column-gap: .2rem;
   align-items: baseline;
 }
 
-/*=============== DISCOUNT ===============*/
+/*=============== GUIDELINES ===============*/
+.guidelines__data{
+  padding: 1rem 0;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.guidelines__list{
+  font-size: var(--h3-font-size);
+  margin-top: 1rem;
+  display: flex;
+  column-gap: .2rem;
+  align-items: baseline;
+}
 
 
-/*=============== NEW ARRIVALS ===============*/
+/*=============== REGISTRATION ===============*/
+.registration__data{
+  padding: 1rem 0;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.registration__info{
+  letter-spacing: .1rem;
+}
+
+.registration__table{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: var(--small-font-size);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: var(--table-text-color);
+  width: fit-content;
+}
+
+.registration__table table{
+  border-collapse: collapse;
+  background-color: var(--table-color);
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  text-align: left;
+  overflow: hidden;
+  border-radius: .5rem;
+  border-style: hidden;
+}
+
+.registration__table thead{
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  background-color: var(--table-color-alt);
+}
+
+.registration__table th{
+  padding: .5rem .5rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-weight: var(--font-semi-bold);
+  border: .05rem solid;
+}
+
+.registration__table td{
+  padding: .5rem .5rem;
+  border: .05rem solid;
+}
+
+.registration__table .table__column{
+  text-align: center;
+}
+
 
 
 /*=============== NEWSLETTER ===============*/
@@ -613,8 +684,8 @@ button{
   }
 
   .scroll-header{
-    background: hsla(180, 28%, 95%, 0.5);
-    backdrop-filter: blur(14px);
+    background: hsla(180, 28%, 95%, 0.4);
+    backdrop-filter: blur(12px);
     box-shadow: 0 2px 8px rgba(0,0,0,.1);
   }
 
@@ -851,6 +922,6 @@ button{
 
   .nav__img:hover{
     transform: translateX(80px) translateY(-2rem);
-    filter: brightness(1.6) contrast(0.75)  blur(0px) opacity(100%);
+    filter: brightness(1.6) contrast(0.75) blur(0px) opacity(100%);
   }
 }
