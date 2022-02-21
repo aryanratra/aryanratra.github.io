@@ -480,6 +480,12 @@ button {
   align-items: baseline;
 }
 
+/*=============== PAPER CALL ===============*/
+.committee__button{
+  color: var(--first-color);
+}
+
+
 /*=============== GUIDELINES ===============*/
 .guidelines__data {
   padding: 1rem 0;
@@ -566,7 +572,7 @@ button {
 
 .contact__links a {
   font-size: 2.5rem;
-
+  border-radius: 0.5rem;
   margin-right: 0.7rem;
 }
 
