@@ -22,33 +22,44 @@ let scene;
 let renderer;
 let textureLoader;
 let viewer;
+let controls;
+let polyfill;
 
 function init() {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 100000);
     textureLoader = new THREE.TextureLoader();
-    
+
     //Image Viewer
     let viewerGeometry = new THREE.SphereGeometry(500, 60, 40);
     viewerGeometry.scale(-1, 1, 1);
-    
+
     let viewerMaterial = new THREE.MeshBasicMaterial({
         map: textureLoader.load(galleryImages[0])
     });
-    
+
     viewer = new THREE.Mesh(viewerGeometry, viewerMaterial);
     viewer.rotation.y = -Math.PI / 2;
     scene.add(viewer);
-    
+
     //Initialize the Renderer
-    renderer = new THREE.WebGLRenderer({antialias: true});
+    renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.xr.enabled = true;
     viewerContainer.appendChild(renderer.domElement);
-    document.body.appendChild( VRButton.createButton(renderer));
+    document.body.appendChild(VRButton.createButton(renderer));
     renderer.setAnimationLoop(animate);
-    
+
+    //OrbitControls
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.target.set(camera.position.x + .1, camera.position.y, camera.position.z);
+    controls.rotateSpeed = -.5;
+    controls.enableDamping = true;
+    controls.dampingFactor = .1;
+
+
+
     function onWindowResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
@@ -65,7 +76,9 @@ function init() {
  * Main Render Loop
  */
 function animate() {
-    renderer.render(scene,camera);
+
+    controls.update();
+    renderer.render(scene, camera);
 }
 
 init();
