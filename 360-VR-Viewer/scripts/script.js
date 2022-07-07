@@ -23,7 +23,6 @@ let renderer;
 let textureLoader;
 let viewer;
 let controls;
-let polyfill;
 
 function init() {
     scene = new THREE.Scene();
@@ -59,11 +58,11 @@ function init() {
     controls.dampingFactor = .1;
 
 
-
     function onWindowResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
 
+        controls.update();
         renderer.setSize(window.innerWidth, window.innerHeight);
     }
     window.addEventListener('resize', onWindowResize, false);
