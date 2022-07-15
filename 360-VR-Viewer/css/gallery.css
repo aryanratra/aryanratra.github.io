@@ -27,16 +27,18 @@ body {
     display: inline-block;
     width: 128px;
     height: 128px;
-    margin: 0.5em;
+    margin: 1em;
     overflow: hidden;
-    background-color: gray;
-    border: 1px gray solid;
+    background-image: linear-gradient(#89CFF0, #13274F);
     border-radius: 64px;
     box-shadow: 5px 5px 5px black;
+    transition: 0.18s;
+    transition-timing-function: ease-in-out;
   }
   
   #thumbnail-gallery .thumbnail:hover {
-    border-color: white;
+    transform: scale(104%);
+    background-image: linear-gradient(#aae4ff, #1b366d);
   }
   
   #thumbnail-gallery .thumbnail img{
@@ -55,6 +57,7 @@ body {
       white-space: nowrap;
       position: fixed;
       bottom: 5em;
+      margin: 0.5em;
     }
 
     #thumbnail-gallery .thumbnail {

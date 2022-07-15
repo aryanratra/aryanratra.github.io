@@ -11,6 +11,8 @@ let galleryImages = [
     './images/image3.jpg',
     './images/image4.jpg',
     './images/image5.jpg',
+  	'./images/image6.jpg',
+	  './images/image7.jpg',
 ];
 
 let viewerContainer = document.getElementById('viewer');
@@ -46,7 +48,7 @@ function init() {
     viewerGeometry.scale(-1, 1, 1);
     
     
-    let viewerMaterial = new THREE.MeshBasicMaterial({map: textureLoader.load(galleryImages[0])});
+    let viewerMaterial = new THREE.MeshBasicMaterial({map: textureLoader.load(galleryImages[4])});
     
     viewer = new THREE.Mesh(viewerGeometry, viewerMaterial);
     viewer.rotation.y = -Math.PI / 2;
