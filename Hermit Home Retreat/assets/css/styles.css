@@ -787,6 +787,49 @@ body.dark-theme{
   background-color: var(--first-color);
 }
 
+/*=============== FORM ===============*/
+.booking__form {
+  padding-top: 08rem;
+}
+
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #ddd;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], select {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
 /*=============== FOOTER ===============*/
 .footer__container{
   row-gap: 2.5rem;
