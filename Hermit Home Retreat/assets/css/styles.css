@@ -425,6 +425,10 @@ body.dark-theme{
   box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
 }
 
+.home__book {
+  margin-top: 5rem;
+}
+
 /*=============== BUTTON ===============*/
 .button{
   display: inline-block;
@@ -794,7 +798,7 @@ body.dark-theme{
 
 
 form {
-  width: 50%;
+  width: 80vw;
   margin: 0 auto;
   padding: 1em;
   border: 1px solid #ddd;
@@ -809,7 +813,7 @@ label {
   font-weight: bold;
 }
 
-input[type="text"], input[type="tel"], input[type="email"], select {
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], select {
   width: 100%;
   padding: 0.5em;
   margin-bottom: 1em;
@@ -817,7 +821,18 @@ input[type="text"], input[type="tel"], input[type="email"], select {
   border-radius: 5px;
 }
 
-input[type="submit"] {
+.button__div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button__div p {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.submit__button {
   background-color: #4CAF50;
   color: white;
   padding: 0.5em 1em;
@@ -826,8 +841,23 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.submit__button:hover {
   background-color: #3e8e41;
+}
+
+.upi__photo {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.upi__photo img {
+  width: 80vw;
+}
+
+.upi__photo p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /*=============== FOOTER ===============*/
@@ -1055,6 +1085,10 @@ input[type="submit"]:hover {
   .footer__content{
     grid-template-columns: repeat(3, max-content);
   }
+
+  .upi__photo img {
+    width: 20rem;
+  }
 }
 
 @media screen and (min-width: 767px){
@@ -1277,6 +1311,10 @@ input[type="submit"]:hover {
   .show-scroll{
     bottom: 3rem;
     right: 3rem;
+  }
+
+  form {
+    width: 50%;
   }
 }
 
