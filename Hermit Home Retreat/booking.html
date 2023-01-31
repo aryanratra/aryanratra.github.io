@@ -102,30 +102,30 @@
 
     <!--==================== FORM ====================-->
     <div class="booking__form">
-      <form id="form" onsubmit="validateForm(event)">
+      <form id="form" action="https://docs.google.com/forms/d/e/1FAIpQLSdG4Gv5E5lcKauBQDPovyW0cMVkW6jDedalOqqBhDnvuKFncQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true; validateForm(event)">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="entry.1686372658" required>
         <br><br>
 
         <label for="phone">Phone Number:</label>
-        <input type="text" id="phone" name="phone" required>
+        <input type="text" id="phone" name="entry.1116541141" required>
         <br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="entry.140098065" required>
         <br><br>
 
         <label for="checkIn">Check-in date:</label>
-        <input type="date" id="checkIn" name="checkIn" required>
+        <input type="date" id="checkIn" name="entry.575631366" required>
         <br><br>
 
         <label for="checkOut">Check-out date:</label>
-        <input type="date" id="checkOut" name="checkOut" required>
+        <input type="date" id="checkOut" name="entry.85453324" required>
         <br><br>
 
         <label for="roomType">Room type:</label>
-        <select id="roomType" name="roomType" required>
-          <option value="">--Select--</option>
+        <select id="roomType" name="entry.2004464849" required>
+          <option value="">Select</option>
           <option value="Superior Luxury Twin Suite Room">Superior Luxury Twin Suite Room - ₹6500/Night</option>
           <option value="Superior Executive Twin Suite Room">Superior Executive Twin Suite Room - ₹5500/Night</option>
           <option value="Deluxe King Twin Room">Deluxe King Twin Room - ₹3800/Night</option>
@@ -134,7 +134,7 @@
         <br><br>
 
         <label for="UPI">UPI Transaction ID:</label>
-        <input type="text" id="UPI" name="UPI" required>
+        <input type="text" id="UPI" name="entry.1581497930" required>
         <br><br>
 
 
@@ -147,33 +147,21 @@
 
       <div class="upi__photo">
         <img src="./assets/img/upi_1675178501158.png" alt="QR code">
+
         <p>Scan the QR code to make a payment</p>
       </div>
     </div>
 
     <script>
       function validateForm(event) {
-        event.preventDefault();
         var checkInDate = new Date(document.getElementById("checkIn").value);
         var checkOutDate = new Date(document.getElementById("checkOut").value);
         var formElements = document.querySelectorAll("input, select");
         warningContainer = document.getElementById("warning");
         messageContainer = document.getElementById("message");
-        var isValid = true;
-
-        for (var i = 0; i < formElements.length; i++) {
-          if (!formElements[i].value) {
-            isValid = false;
-            break;
-          }
-        }
-
-        if (!isValid) {
-          alert("Please fill in all the fields");
-          return false;
-        }
 
         if (checkOutDate <= checkInDate) {
+          event.preventDefault();
           warningContainer.innerHTML = null;
           var warningText = document.createElement("p");
           warningText.style.color = "red";
@@ -181,19 +169,12 @@
           warningContainer.appendChild(warningText);
           return false;
         }
-
-        warningContainer.innerHTML = null;
-        var greenText = document.createElement("p");
-        greenText.style.color = "green";
-        greenText.innerHTML = "Booking request sent!";
-        messageContainer.appendChild(greenText);
-
-        formElements.forEach(function (element) {
-          element.value = "";
-        });
       }
-
     </script>
+
+    <script type="text/javascript">var submitted = false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.alert('Booking Confirmed!'); window.location='booking.html';}"></iframe>
 
     <!--==================== POPULAR ====================-->
 

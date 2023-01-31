@@ -852,6 +852,7 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="date"], 
 
 .upi__photo img {
   width: 80vw;
+  box-shadow: 2px 2px 5px #ddd;
 }
 
 .upi__photo p {
